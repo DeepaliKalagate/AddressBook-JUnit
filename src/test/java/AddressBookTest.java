@@ -8,6 +8,8 @@ public class AddressBookTest
 {
     private String fileName="/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/Address.json";
     AddressBookServices addressBookServices=new AddressBookServices();
+    AddressBookManagemant addressBookManagemant=new AddressBookManagemant();
+
     @Test
     public void givePersonDetails_checkDetails_ShouldAddInList() throws IOException
     {
@@ -56,4 +58,13 @@ public class AddressBookTest
         String result=addressBookServices.printList();
         System.out.println(result);
     }
+
+    @Test
+    public void giveNewFile_CheckFiles_ShouldCreateNewAddressBook() throws Exception
+    {
+        String result=addressBookManagemant.createAddressbook("Person");
+        System.out.println(result);
+    }
+
+
 }

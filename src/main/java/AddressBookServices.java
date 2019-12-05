@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import java.io.*;
+import java.nio.file.FileAlreadyExistsException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.Scanner;
 public class AddressBookServices implements InterfaceManager
 {
     private String fileName="/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/Address.json";
+    private String fileName1="/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/Person.json";
     List<Person> list=new ArrayList<>();
     Person person=new Person();
     Address address=new Address();
@@ -148,6 +150,7 @@ public class AddressBookServices implements InterfaceManager
         //writeToJsonFile();
         return "Printed List Successfully";
     }
+
 
 
 }

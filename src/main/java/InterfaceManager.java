@@ -9,4 +9,5 @@ public interface InterfaceManager
     public String sortByName() throws IOException;
     public String sortByZip() throws IOException;
     public String printList() throws IOException;
+
 }
