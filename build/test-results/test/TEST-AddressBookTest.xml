@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T09:17:10" hostname="admin1-H110M-H" time="0.046">
+  <properties/>
+  <testcase name="givePersonList_ReadList_ShouldReturnList" classname="AddressBookTest" time="0.046"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

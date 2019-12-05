@@ -1,0 +1,42 @@
+[
+  {
+    "firstName": "Deepali",
+    "lastName": "Patil",
+    "mobNo": "9898612435",
+    "address": {
+      "city": "Dombivli East",
+      "state": "Thane",
+      "zip": "421201"
+    }
+  },
+  {
+    "firstName": "Lokesh",
+    "lastName": "Patil",
+    "mobNo": "6576356746",
+    "address": {
+      "city": "Dombivli East",
+      "state": "Maharashtra",
+      "zip": "421201"
+    }
+  },
+  {
+    "firstName": "Guru",
+    "lastName": "Deshmukh",
+    "mobNo": "9898767654",
+    "address": {
+      "city": "Thane",
+      "state": "Maharashtra",
+      "zip": "400675"
+    }
+  },
+  {
+    "firstName": "Deepak",
+    "lastName": "Gavali",
+    "mobNo": "9898765432",
+    "address": {
+      "city": "Bhandup",
+      "state": "Goa",
+      "zip": "456987"
+    }
+  }
+]
