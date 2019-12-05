@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T13:24:57" hostname="admin1-H110M-H" time="0.042">
+<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T13:33:48" hostname="admin1-H110M-H" time="0.003">
   <properties/>
-  <testcase name="giveFileName_checkFiles_ShouldOpenFile" classname="AddressBookTest" time="0.042"/>
+  <testcase name="giveFileName_checkFiles_ShouldOpenFile" classname="AddressBookTest" time="0.003"/>
   <system-out><![CDATA[Person.json
 Address.json
-FirstName   LastName    Mobile_Number     Zip       City     State        
-
-Guru     Deshmukh     9898798987     Dadar    Maharashtra    400088
-Deepali     Patil     9898612435     Dombivli East    Thane    421201
-Lokesh     Patil     6576356746     Dombivli East    Maharashtra    421201
-File Opened Successfully
+File Not Found
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -66,5 +66,9 @@ public class AddressBookTest
         System.out.println(result);
     }
 
-
+    @Test
+    public void giveFileName_checkFiles_ShouldOpenFile()
+    {
+        addressBookManagemant.openAddressBook("Address");
+    }
 }

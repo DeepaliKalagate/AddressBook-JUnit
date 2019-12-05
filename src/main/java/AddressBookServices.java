@@ -138,7 +138,7 @@ public class AddressBookServices implements InterfaceManager
     public String printList() throws IOException
     {
         readFile(fileName);
-        System.out.println("FirstName   LastName    Mobile_Number     Zip       City     State        \n");
+        System.out.println("FirstName   LastName    Mobile_Number       City     State      Zip \n");
         String spaces = " ";
         for (int i = 0; i < list.size(); i++)
         {
