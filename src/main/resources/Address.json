@@ -1,15 +1,5 @@
 [
   {
-    "firstName": "Deepali",
-    "lastName": "Patil",
-    "mobNo": "9898612435",
-    "address": {
-      "city": "Dombivli East",
-      "state": "Thane",
-      "zip": "421201"
-    }
-  },
-  {
     "firstName": "Guru",
     "lastName": "Deshmukh",
     "mobNo": "9898798987",
@@ -17,6 +7,16 @@
       "city": "Dadar",
       "state": "Maharashtra",
       "zip": "400088"
+    }
+  },
+  {
+    "firstName": "Deepali",
+    "lastName": "Patil",
+    "mobNo": "9898612435",
+    "address": {
+      "city": "Dombivli East",
+      "state": "Thane",
+      "zip": "421201"
     }
   },
   {

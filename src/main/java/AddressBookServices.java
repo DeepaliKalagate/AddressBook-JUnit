@@ -111,4 +111,24 @@ public class AddressBookServices implements InterfaceManager
             writeToJsonFile();
             return "Sorted By Name";
     }
+
+    @Override
+    public String sortByZip() throws IOException
+    {
+        readFile(fileName);
+        for(int i=0;i<list.size()-1;i++)
+        {
+            for (int j = 0; j < list.size() - i - 1; j++)
+            {
+                if (list.get(j).getAddress().getZip().compareTo(list.get(j + 1).getAddress().getZip()) > 0)
+                {
+                    Person temp=list.get(j);
+                    list.set(j,list.get(j+1));
+                    list.set(j+1,temp);
+                }
+            }
+        }
+        writeToJsonFile();
+        return "Sorted By Zip Successfully";
+    }
 }

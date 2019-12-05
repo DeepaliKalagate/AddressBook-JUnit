@@ -41,4 +41,11 @@ public class AddressBookTest
         String result=addressBookServices.sortByName();
         System.out.println(result);
     }
+
+    @Test
+    public void givePersonList_CheckList_ShouldReturnSortByZip() throws IOException
+    {
+        String result=addressBookServices.sortByZip();
+        System.out.println(result);
+    }
 }
