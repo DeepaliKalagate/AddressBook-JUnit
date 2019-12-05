@@ -34,4 +34,11 @@ public class AddressBookTest
         String result=addressBookServices.deletePerson("Deepak");
         System.out.println(result);
     }
+
+    @Test
+    public void givePersonList_CheckList_ShouldReturnSortByName() throws IOException
+    {
+        String result=addressBookServices.sortByName();
+        System.out.println(result);
+    }
 }

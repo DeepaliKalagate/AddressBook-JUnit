@@ -28,15 +28,5 @@
       "state": "Maharashtra",
       "zip": "400088"
     }
-  },
-  {
-    "firstName": "Deepak",
-    "lastName": "Gavali",
-    "mobNo": "9898765432",
-    "address": {
-      "city": "Bhandup",
-      "state": "Goa",
-      "zip": "456987"
-    }
   }
 ]

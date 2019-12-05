@@ -7,6 +7,7 @@ import com.google.gson.JsonParser;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -89,5 +90,25 @@ public class AddressBookServices implements InterfaceManager
         list.removeIf(Person->Person.getFirstName().equals(name));
         writeToJsonFile();
         return "Person Information Deleted Successfully";
+    }
+
+    @Override
+    public String sortByName() throws IOException
+    {
+        readFile(fileName);
+            for(int i=0;i<list.size()-1;i++)
+            {
+                for(int j=0;j<list.size()-i-1;j++)
+                {
+                    if(list.get(j).getFirstName().compareTo(list.get(j+1).getFirstName())>0)
+                    {
+                        Person temp=list.get(j);
+                        list.set(j,list.get(j+1));
+                        list.set(j+1,temp);
+                    }
+                }
+            }
+            writeToJsonFile();
+            return "Sorted By Name";
     }
 }

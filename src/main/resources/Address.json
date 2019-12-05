@@ -10,16 +10,6 @@
     }
   },
   {
-    "firstName": "Lokesh",
-    "lastName": "Patil",
-    "mobNo": "6576356746",
-    "address": {
-      "city": "Dombivli East",
-      "state": "Maharashtra",
-      "zip": "421201"
-    }
-  },
-  {
     "firstName": "Guru",
     "lastName": "Deshmukh",
     "mobNo": "9898798987",
@@ -27,6 +17,16 @@
       "city": "Dadar",
       "state": "Maharashtra",
       "zip": "400088"
+    }
+  },
+  {
+    "firstName": "Lokesh",
+    "lastName": "Patil",
+    "mobNo": "6576356746",
+    "address": {
+      "city": "Dombivli East",
+      "state": "Maharashtra",
+      "zip": "421201"
     }
   }
 ]
