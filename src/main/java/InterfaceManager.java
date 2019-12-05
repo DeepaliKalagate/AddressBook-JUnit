@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.List;
 
 public interface InterfaceManager
 {
@@ -7,4 +8,5 @@ public interface InterfaceManager
     public String deletePerson(String name) throws IOException;
     public String sortByName() throws IOException;
     public String sortByZip() throws IOException;
+    public String printList() throws IOException;
 }

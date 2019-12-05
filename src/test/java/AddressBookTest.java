@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.List;
 
 public class AddressBookTest
 {
@@ -46,6 +47,13 @@ public class AddressBookTest
     public void givePersonList_CheckList_ShouldReturnSortByZip() throws IOException
     {
         String result=addressBookServices.sortByZip();
+        System.out.println(result);
+    }
+
+    @Test
+    public void givePersonList_ReadList_ShouldPrintAllEntries() throws IOException
+    {
+        String result=addressBookServices.printList();
         System.out.println(result);
     }
 }

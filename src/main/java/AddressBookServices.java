@@ -131,4 +131,23 @@ public class AddressBookServices implements InterfaceManager
         writeToJsonFile();
         return "Sorted By Zip Successfully";
     }
+
+    @Override
+    public String printList() throws IOException
+    {
+        readFile(fileName);
+        System.out.println("FirstName   LastName    Mobile_Number     Zip       City     State        \n");
+        String spaces = " ";
+        for (int i = 0; i < list.size(); i++)
+        {
+            System.out.print(list.get(i).getFirstName() + "     " + list.get(i).getLastName() + "     "
+                    + list.get(i).getMobNo() + "     " + list.get(i).getAddress().getCity() + "    "
+                    + list.get(i).getAddress().getState() + "    "+ list.get(i).getAddress().getZip());
+                System.out.println();
+        }
+        //writeToJsonFile();
+        return "Printed List Successfully";
+    }
+
+
 }

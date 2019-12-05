@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T11:33:10" hostname="admin1-H110M-H" time="0.048">
+<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-05T11:49:48" hostname="admin1-H110M-H" time="0.041">
   <properties/>
-  <testcase name="givePersonList_CheckList_ShouldReturnSortByZip" classname="AddressBookTest" time="0.048"/>
-  <system-out><![CDATA[Sorted By Zip Successfully
+  <testcase name="givePersonList_ReadList_ShouldPrintAllEntries" classname="AddressBookTest" time="0.041"/>
+  <system-out><![CDATA[FirstName   LastName    Mobile_Number     Zip       City     State        
+
+Guru     Deshmukh     9898798987     Dadar    Maharashtra    400088
+Deepali     Patil     9898612435     Dombivli East    Thane    421201
+Lokesh     Patil     6576356746     Dombivli East    Maharashtra    421201
+Printed List Successfully
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
