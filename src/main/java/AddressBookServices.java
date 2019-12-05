@@ -24,6 +24,7 @@ public class AddressBookServices implements InterfaceManager
     @Override
     public void addUser(String firstName, String lastName, String mobNo, String city,String state,String  zip) throws IOException
     {
+        readFile(fileName);
         address.setCity(city);
         address.setState(state);
         address.setZip(zip);
@@ -38,13 +39,43 @@ public class AddressBookServices implements InterfaceManager
         System.out.println(list);
 
         writeToJsonFile();
+        readFile(fileName);
     }
 
     public void writeToJsonFile() throws IOException
     {
-         json=gson.toJson(list);
+        json=gson.toJson(list);
         FileWriter fileWriter=new FileWriter("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/Address.json");
         fileWriter.write(json);
         fileWriter.close();
+    }
+
+    public void readFile(String fileName) throws IOException
+    {
+        this.fileName=fileName;
+        this.list=objectMapper.readValue(new File(this.fileName), new TypeReference<List<Person>>()
+        {
+        });
+    }
+
+
+    @Override
+    public String editPerson(String name,String mobNo, String city, String state, String zip) throws IOException
+    {
+
+        readFile(fileName);
+
+        for (int i=0;i<list.size();i++)
+        {
+            if (list.get(i).getFirstName().equals(name))
+            {
+                list.get(i).setMobNo(mobNo);
+                list.get(i).getAddress().setCity(city);
+                list.get(i).getAddress().setState(state);
+                list.get(i).getAddress().setZip(zip);
+            }
+        }
+        writeToJsonFile();
+        return "Edit Successfully";
     }
 }
