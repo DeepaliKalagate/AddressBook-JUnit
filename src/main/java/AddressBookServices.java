@@ -22,7 +22,7 @@ public class AddressBookServices implements InterfaceManager
     Scanner scanner=new Scanner(System.in);
 
     @Override
-    public void addUser(String firstName, String lastName, String mobNo, String city,String state,String  zip) throws IOException
+    public String addUser(String firstName, String lastName, String mobNo, String city,String state,String  zip) throws IOException
     {
         readFile(fileName);
         address.setCity(city);
@@ -40,22 +40,25 @@ public class AddressBookServices implements InterfaceManager
 
         writeToJsonFile();
         readFile(fileName);
+        return "Added Successfully New Person";
     }
 
-    public void writeToJsonFile() throws IOException
+    public String  writeToJsonFile() throws IOException
     {
         json=gson.toJson(list);
         FileWriter fileWriter=new FileWriter("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/Address.json");
         fileWriter.write(json);
         fileWriter.close();
+        return "Written Successfully";
     }
 
-    public void readFile(String fileName) throws IOException
+    public String readFile(String fileName) throws IOException
     {
         this.fileName=fileName;
         this.list=objectMapper.readValue(new File(this.fileName), new TypeReference<List<Person>>()
         {
         });
+        return "Records From File Readed Successfully";
     }
 
 
@@ -76,6 +79,15 @@ public class AddressBookServices implements InterfaceManager
             }
         }
         writeToJsonFile();
-        return "Edit Successfully";
+        return "Edited Person Information Successfully";
+    }
+
+    @Override
+    public String deletePerson(String name) throws IOException
+    {
+        readFile(fileName);
+        list.removeIf(Person->Person.getFirstName().equals(name));
+        writeToJsonFile();
+        return "Person Information Deleted Successfully";
     }
 }
