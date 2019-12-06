@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T04:46:10" hostname="admin1-H110M-H" time="0.057">
+<testsuite name="AddressBookTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-06T05:35:58" hostname="admin1-H110M-H" time="0.001">
   <properties/>
-  <testcase name="giveFileName_WriteOneEntry_ShouldSaveFile" classname="AddressBookTest" time="0.057"/>
-  <system-out><![CDATA[[PersonfirstName='Guru', lastName='Deshmukh', mobno='9898798987', address=Addresscity='Dadar', state='Maharashtra', zip=400088
-, PersonfirstName='Deepali', lastName='Patil', mobno='9898612435', address=Addresscity='Dombivli East', state='Thane', zip=421201
-, PersonfirstName='Lokesh', lastName='Patil', mobno='6576356746', address=Addresscity='Dombivli East', state='Maharashtra', zip=421201
-, PersonfirstName='Sai', lastName='Kalagate', mobno='8097605940', address=Addresscity='Nagpur', state='Maharashtra', zip=400560
-]
-FirstName   LastName    Mobile_Number       City     State      Zip 
-
-Guru     Deshmukh     9898798987     Dadar    Maharashtra    400088
-Deepali     Patil     9898612435     Dombivli East    Thane    421201
-Lokesh     Patil     6576356746     Dombivli East    Maharashtra    421201
-Sai     Kalagate     8097605940     Nagpur    Maharashtra    400560
-File Saved Successfully
-]]></system-out>
+  <testcase name="giveFileName_FetchData_ShouldSaveInGivenFileName" classname="AddressBookTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

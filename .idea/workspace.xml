@@ -19,9 +19,7 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AddressBookManagemant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AddressBookManagemant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AddressBookServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AddressBookServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InterfaceManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InterfaceManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Address.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Address.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AddressBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddressBookTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,13 +68,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AddressBookTest.giveFileName_WriteOneEntry_ShouldSaveFile">
-    <configuration name="AddressBookTest.giveEditOption_EditUser_ShouldEditInFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.AddressBookTest.giveFileName_FetchData_ShouldSaveInGivenFileName">
+    <configuration name="AddressBookTest.giveFileName_FetchData_ShouldSaveInGivenFileName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;AddressBookTest.giveEditOption_EditUser_ShouldEditInFile&quot;" />
+        <option name="scriptParameters" value="--tests &quot;AddressBookTest.giveFileName_FetchData_ShouldSaveInGivenFileName&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -173,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AddressBookTest.giveFileName_FetchData_ShouldSaveInGivenFileName" />
         <item itemvalue="Gradle.AddressBookTest.giveFileName_WriteOneEntry_ShouldSaveFile" />
         <item itemvalue="Gradle.AddressBookTest.giveFileName_checkFiles_ShouldOpenFile" />
         <item itemvalue="Gradle.AddressBookTest.giveNewFile_CheckFiles_ShouldCreateNewAddressBook" />
         <item itemvalue="Gradle.AddressBookTest.givePersonList_CheckList_ShouldReturnSortByName" />
-        <item itemvalue="Gradle.AddressBookTest.giveEditOption_EditUser_ShouldEditInFile" />
       </list>
     </recent_temporary>
   </component>

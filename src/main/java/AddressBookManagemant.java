@@ -2,6 +2,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
 public class AddressBookManagemant implements InterfaceManagement
 {
     private String fileName="/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/Address.json";
+    private  String filePath="/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/";
 
     List<Person> list=new ArrayList<>();
     Person person=new Person();
@@ -111,4 +113,20 @@ public class AddressBookManagemant implements InterfaceManagement
         }
     }
 
+
+    @Override
+    public boolean saveAsAddressBook(String oldName, String newName)
+    {
+        if (oldName.length()>0 && newName.length()>0)
+        {
+            File file=new File(filePath+"/"+oldName+".json");
+            if(file.exists())
+            {
+                File renameFile=new File(filePath+"/"+newName+".json");
+                file.renameTo(renameFile);
+                return true;
+            }
+        }
+        return false;
+    }
 }

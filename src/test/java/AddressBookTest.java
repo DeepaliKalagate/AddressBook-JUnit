@@ -76,4 +76,10 @@ public class AddressBookTest
         addressBookServices.addUser("Sai","Kalagate","8097605940","Nagpur","Maharashtra","400560");
         addressBookManagemant.saveAddressBook("Address");
     }
+
+    @Test
+    public void giveFileName_FetchData_ShouldSaveInGivenFileName()
+    {
+        addressBookManagemant.saveAsAddressBook("Person","NewAddress");
+    }
 }
