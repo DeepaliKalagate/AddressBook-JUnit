@@ -1,5 +1,8 @@
+import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class AddressBookTest
@@ -11,75 +14,62 @@ public class AddressBookTest
     @Test
     public void givePersonDetails_checkDetails_ShouldAddInList() throws IOException
     {
-        String result=addressBookServices.addUser("Deepak","Gavali","9898765432","Bhandup","Goa","456987");
-        System.out.println(result);
-    }
-
-    @Test
-    public void givePersonList_ReadList_ShouldReturnList() throws IOException
-    {
-        String result=addressBookServices.readFile(fileName);
-        System.out.println(result);
+        Assert.assertTrue(addressBookServices.addUser("Address","Deepak","Gavali","9898765432","Bhandup","Goa","456987"));
     }
 
     @Test
     public void givePersonName_EditUser_ShouldEditInFile() throws IOException
     {
-        String result=addressBookServices.editPerson("Guru","9898798987","Dadar","Maharashtra","400088");
-        System.out.println(result);
+        Assert.assertTrue(addressBookServices.editPerson("Address","Guru","9898798987","Dadar","Maharashtra","400088"));
     }
 
     @Test
     public void givePersonName_CheckUserInFile_ShouldDeleteFromFile() throws IOException
     {
-        String result=addressBookServices.deletePerson("Deepak");
-        System.out.println(result);
+        Assert.assertTrue(addressBookServices.deletePerson("Address","Deepak"));
     }
 
     @Test
     public void givePersonList_CheckList_ShouldReturnSortByName() throws IOException
     {
-        String result=addressBookServices.sortByName();
-        System.out.println(result);
+        Assert.assertTrue(addressBookServices.sortByName("Address"));
     }
 
     @Test
     public void givePersonList_CheckList_ShouldReturnSortByZip() throws IOException
     {
-        String result=addressBookServices.sortByZip();
-        System.out.println(result);
+        Assert.assertTrue(addressBookServices.sortByZip("Address"));
     }
 
     @Test
     public void givePersonList_ReadList_ShouldPrintAllEntries() throws IOException
     {
-        String result=addressBookServices.printList();
-        System.out.println(result);
+        Assert.assertTrue(addressBookServices.printList("Address"));
     }
 
     @Test
     public void giveNewFile_CheckFiles_ShouldCreateNewAddressBook() throws Exception
     {
-        String result=addressBookManagemant.createAddressBook("Person");
-        System.out.println(result);
+        Assert.assertTrue(addressBookManagemant.createAddressBook("Person"));
     }
 
     @Test
     public void giveFileName_checkFiles_ShouldOpenFile()
     {
-        addressBookManagemant.openAddressBook("Address");
+        Assert.assertTrue(addressBookManagemant.openAddressBook("Address"));
     }
 
     @Test
     public void giveFileName_WriteOneEntry_ShouldSaveFile() throws IOException
     {
-        addressBookServices.addUser("Sai","Kalagate","8097605940","Nagpur","Maharashtra","400560");
-        addressBookManagemant.saveAddressBook("Address");
+        Assert.assertTrue(addressBookServices.addUser("Address","Anuska","Kalagate","8097453222","Ichalkaranji","Maharashtra","416115"));
+        Assert.assertTrue(addressBookManagemant.saveAddressBook("Address"));
     }
 
     @Test
-    public void giveFileName_FetchData_ShouldSaveInGivenFileName()
+    public void giveFileName_FetchData_ShouldSaveInGivenFileName() throws Exception
     {
-        addressBookManagemant.saveAsAddressBook("Person","NewAddress");
+       Assert.assertTrue(addressBookManagemant.saveAsAddresBook("NewAddress","Abc"));
     }
+
 }

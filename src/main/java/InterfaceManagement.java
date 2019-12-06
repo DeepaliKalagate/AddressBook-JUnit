@@ -1,9 +1,10 @@
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface InterfaceManagement
 {
-    public String createAddressBook(String fileName) throws Exception;
-    public void openAddressBook(String fileName);
-    public void saveAddressBook(String fileName) throws IOException;
-    public boolean saveAsAddressBook(String oldName, String newName);
+    public boolean createAddressBook(String fileName) throws Exception;
+    public boolean openAddressBook(String fileName);
+    public boolean saveAddressBook(String fileName) throws IOException;
+    public boolean saveAsAddresBook(String fileName,String newFileName) throws Exception;
 }

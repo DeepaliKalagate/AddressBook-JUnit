@@ -25,9 +25,9 @@ public class AddressBookServices implements InterfaceManager
     Scanner scanner=new Scanner(System.in);
 
     @Override
-    public String addUser(String firstName, String lastName, String mobNo, String city,String state,String  zip) throws IOException
+    public boolean addUser(String fileName,String firstName, String lastName, String mobNo, String city,String state,String  zip) throws IOException
     {
-        readFile(fileName);
+        readFile(new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/"+fileName+".json"));
         address.setCity(city);
         address.setState(state);
         address.setZip(zip);
@@ -37,39 +37,41 @@ public class AddressBookServices implements InterfaceManager
         person.setMobNo(mobNo);
         person.setAddress(address);
 
-        Person temp=new Person(firstName,lastName,mobNo,new Address(city,state,zip));
+        Person temp=new Person(fileName,firstName,lastName,mobNo,new Address(city,state,zip));
         list.add(temp);
         System.out.println(list);
 
-        writeToJsonFile();
-        readFile(fileName);
-        return "Added Successfully New Person";
+        writeToJsonFile(fileName);
+        readFile(new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/"+fileName+".json"));
+        System.out.println("Added Successfully New Person");
+        return true;
     }
 
-    public String  writeToJsonFile() throws IOException
+    public boolean  writeToJsonFile(String FileName) throws IOException
     {
         json=gson.toJson(list);
         FileWriter fileWriter=new FileWriter("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/Address.json");
         fileWriter.write(json);
         fileWriter.close();
-        return "Written Successfully";
+        System.out.println("Written Successfully");
+        return true;
     }
 
-    public String readFile(String fileName) throws IOException
+    public boolean readFile(File fileName) throws IOException
     {
-        this.fileName=fileName;
-        this.list=objectMapper.readValue(new File(this.fileName), new TypeReference<List<Person>>()
+        this.list=objectMapper.readValue(fileName, new TypeReference<List<Person>>()
         {
         });
-        return "Records From File Readed Successfully";
+        System.out.println("Read Records From File Successfully");
+        return true;
     }
 
 
     @Override
-    public String editPerson(String name,String mobNo, String city, String state, String zip) throws IOException
+    public boolean editPerson(String fileName,String name,String mobNo, String city, String state, String zip) throws IOException
     {
 
-        readFile(fileName);
+        readFile(new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/"+fileName+".json"));
 
         for (int i=0;i<list.size();i++)
         {
@@ -81,23 +83,25 @@ public class AddressBookServices implements InterfaceManager
                 list.get(i).getAddress().setZip(zip);
             }
         }
-        writeToJsonFile();
-        return "Edited Person Information Successfully";
+        writeToJsonFile(fileName);
+        System.out.println("Edited Person Information Successfully");
+        return true;
     }
 
     @Override
-    public String deletePerson(String name) throws IOException
+    public boolean deletePerson(String fileName,String name) throws IOException
     {
-        readFile(fileName);
+        readFile(new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/"+fileName+".json"));
         list.removeIf(Person->Person.getFirstName().equals(name));
-        writeToJsonFile();
-        return "Person Information Deleted Successfully";
+        writeToJsonFile(fileName);
+        System.out.println("Person Information Deleted Successfully");
+        return true;
     }
 
     @Override
-    public String sortByName() throws IOException
+    public boolean sortByName(String FileName) throws IOException
     {
-        readFile(fileName);
+        readFile(new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/"+fileName+".json"));
             for(int i=0;i<list.size()-1;i++)
             {
                 for(int j=0;j<list.size()-i-1;j++)
@@ -110,14 +114,15 @@ public class AddressBookServices implements InterfaceManager
                     }
                 }
             }
-            writeToJsonFile();
-            return "Sorted By Name";
+            writeToJsonFile(fileName);
+        System.out.println("Sorted By Name");
+            return true;
     }
 
     @Override
-    public String sortByZip() throws IOException
+    public boolean sortByZip(String fileName) throws IOException
     {
-        readFile(fileName);
+        readFile(new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/"+fileName+".json"));
         for(int i=0;i<list.size()-1;i++)
         {
             for (int j = 0; j < list.size() - i - 1; j++)
@@ -130,14 +135,15 @@ public class AddressBookServices implements InterfaceManager
                 }
             }
         }
-        writeToJsonFile();
-        return "Sorted By Zip Successfully";
+        writeToJsonFile(fileName);
+        System.out.println("Sorted By Zip Successfully");
+        return true;
     }
 
     @Override
-    public String printList() throws IOException
+    public boolean printList(String fileName) throws IOException
     {
-        readFile(fileName);
+        readFile(new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/"+fileName+".json"));
         System.out.println("FirstName   LastName    Mobile_Number       City     State      Zip \n");
         String spaces = " ";
         for (int i = 0; i < list.size(); i++)
@@ -147,8 +153,8 @@ public class AddressBookServices implements InterfaceManager
                     + list.get(i).getAddress().getState() + "    "+ list.get(i).getAddress().getZip());
                 System.out.println();
         }
-        //writeToJsonFile();
-        return "Printed List Successfully";
+        System.out.println("Printed List Successfully");
+        return true;
     }
 
 

@@ -1,45 +1,38 @@
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AddressBookManagemant implements InterfaceManagement
 {
     private String fileName="/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/Address.json";
-    private  String filePath="/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/";
-
+    private  String newFile="home/admin1/Documents/AddressBook/src/test/resources";
     List<Person> list=new ArrayList<>();
     Person person=new Person();
     Address address=new Address();
     ObjectMapper objectMapper=new ObjectMapper();
     AddressBookServices addressBookServices=new AddressBookServices();
 
-    public String createAddressBook(String fileName) throws Exception
+    public boolean createAddressBook(String fileName) throws Exception
     {
-            String fileName1="/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/"+fileName+".json";
-            File file =new File(fileName1);
-            if(file.createNewFile())
+            File fileName1=new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/"+fileName+".json");
+
+            boolean file=fileName1.createNewFile();
+            if (file)
             {
-                FileWriter fw=new FileWriter(fileName1);
-                String object="[{"+'"'+"personList"+'"'+":0}]";
-                fw.write(object);
-                fw.close();
+                System.out.println( "New Address Book Created Successfully");
             }
             else
             {
                 throw new Exception("Given Name of Address Book already Exist");
             }
-
-        return "New Address Book Created Successfully";
+            return true;
     }
 
     @Override
-    public void openAddressBook(String fileName)
+    public boolean openAddressBook(String fileName)
     {
         File folder = new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/");
         File[] listOfFiles = folder.listFiles();
@@ -62,7 +55,7 @@ public class AddressBookManagemant implements InterfaceManagement
                         new TypeReference<List<Person>>()
                         {
                         });
-                addressBookServices.printList();
+                addressBookServices.printList(fileName);
             }
 
             catch (Exception e)
@@ -78,55 +71,38 @@ public class AddressBookManagemant implements InterfaceManagement
         {
             System.out.println("Oh-ho,File Not Found!");
         }
+        return true;
     }
 
     @Override
-    public void saveAddressBook(String fileName) throws IOException
+    public boolean saveAddressBook(String fileName) throws IOException
     {
 
         if (new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/" + fileName + ".json")
                 .exists())
         {
-            try
-            {
-                list = objectMapper.readValue(new File(
-                                "/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/" + fileName + ".json"),
-                        new TypeReference<List<Person>>()
-                        {
-                        });
-                addressBookServices.printList();
-                addressBookServices.writeToJsonFile();
-            }
-
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
-            finally
-            {
-                System.out.println("File Saved Successfully");
-            }
+            addressBookServices.printList(fileName);
+            System.out.println("File Saved Successfully");
         }
         else
         {
             System.out.println("Oh-ho,File Not Saved!");
         }
+        return true;
     }
 
-
     @Override
-    public boolean saveAsAddressBook(String oldName, String newName)
+
+    public boolean saveAsAddresBook(String fileName,String newFileName) throws Exception
     {
-        if (oldName.length()>0 && newName.length()>0)
+        File oldFile=new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/"+fileName+".json");
+        if (oldFile.exists())
         {
-            File file=new File(filePath+"/"+oldName+".json");
-            if(file.exists())
-            {
-                File renameFile=new File(filePath+"/"+newName+".json");
-                file.renameTo(renameFile);
-                return true;
-            }
+            addressBookServices.readFile(new File("/home/admin1/Desktop/AddressBook-JUnit/src/main/resources/"+fileName+".json"));
+            createAddressBook(newFileName);
+            addressBookServices.writeToJsonFile(newFileName);
+            addressBookServices.printList(newFileName);
         }
-        return false;
+        return true;
     }
 }

@@ -17,6 +17,10 @@ public class Person
         this.address = address;
     }
 
+    public Person(String fileName, String firstName, String lastName, String mobNo, Address address)
+    {
+    }
+
     public String getFirstName()
     {
         return firstName;
