@@ -1,8 +1,6 @@
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.util.List;
 
 public class AddressBookTest
 {
@@ -62,7 +60,7 @@ public class AddressBookTest
     @Test
     public void giveNewFile_CheckFiles_ShouldCreateNewAddressBook() throws Exception
     {
-        String result=addressBookManagemant.createAddressbook("Person");
+        String result=addressBookManagemant.createAddressBook("Person");
         System.out.println(result);
     }
 
@@ -70,5 +68,12 @@ public class AddressBookTest
     public void giveFileName_checkFiles_ShouldOpenFile()
     {
         addressBookManagemant.openAddressBook("Address");
+    }
+
+    @Test
+    public void giveFileName_WriteOneEntry_ShouldSaveFile() throws IOException
+    {
+        addressBookServices.addUser("Sai","Kalagate","8097605940","Nagpur","Maharashtra","400560");
+        addressBookManagemant.saveAddressBook("Address");
     }
 }

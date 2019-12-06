@@ -1,3 +1,12 @@
-Person.json
-Address.json
-File Not Found
+[PersonfirstName='Guru', lastName='Deshmukh', mobno='9898798987', address=Addresscity='Dadar', state='Maharashtra', zip=400088
+‚, PersonfirstName='Deepali', lastName='Patil', mobno='9898612435', address=Addresscity='Dombivli East', state='Thane', zip=421201
+‡, PersonfirstName='Lokesh', lastName='Patil', mobno='6576356746', address=Addresscity='Dombivli East', state='Maharashtra', zip=421201
+€, PersonfirstName='Sai', lastName='Kalagate', mobno='8097605940', address=Addresscity='Nagpur', state='Maharashtra', zip=400560
+]
+EFirstName   LastName    Mobile_Number       City     State      Zip 
+
+DGuru     Deshmukh     9898798987     Dadar    Maharashtra    400088
+FDeepali     Patil     9898612435     Dombivli East    Thane    421201
+KLokesh     Patil     6576356746     Dombivli East    Maharashtra    421201
+DSai     Kalagate     8097605940     Nagpur    Maharashtra    400560
+File Saved Successfully

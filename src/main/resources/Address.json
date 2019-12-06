@@ -28,5 +28,15 @@
       "state": "Maharashtra",
       "zip": "421201"
     }
+  },
+  {
+    "firstName": "Sai",
+    "lastName": "Kalagate",
+    "mobNo": "8097605940",
+    "address": {
+      "city": "Nagpur",
+      "state": "Maharashtra",
+      "zip": "400560"
+    }
   }
 ]

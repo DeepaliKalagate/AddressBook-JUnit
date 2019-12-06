@@ -11,7 +11,6 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/AddressBookServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/AddressBookServices.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/AddressBookTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/AddressBookTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
@@ -22,6 +21,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/AddressBookManagemant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AddressBookManagemant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AddressBookServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AddressBookServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/InterfaceManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InterfaceManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Address.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Address.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/AddressBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AddressBookTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,13 +70,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.AddressBookTest.giveFileName_checkFiles_ShouldOpenFile">
+  <component name="RunManager" selected="Gradle.AddressBookTest.giveFileName_WriteOneEntry_ShouldSaveFile">
     <configuration name="AddressBookTest.giveEditOption_EditUser_ShouldEditInFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;AddressBookTest.giveEditOption_EditUser_ShouldEditInFile&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AddressBookTest.giveFileName_WriteOneEntry_ShouldSaveFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;AddressBookTest.giveFileName_WriteOneEntry_ShouldSaveFile&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -151,33 +171,13 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AddressBookTest.givePersonList_ReadList_ShouldReturnList" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;AddressBookTest.givePersonList_ReadList_ShouldReturnList&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AddressBookTest.giveFileName_WriteOneEntry_ShouldSaveFile" />
         <item itemvalue="Gradle.AddressBookTest.giveFileName_checkFiles_ShouldOpenFile" />
         <item itemvalue="Gradle.AddressBookTest.giveNewFile_CheckFiles_ShouldCreateNewAddressBook" />
         <item itemvalue="Gradle.AddressBookTest.givePersonList_CheckList_ShouldReturnSortByName" />
         <item itemvalue="Gradle.AddressBookTest.giveEditOption_EditUser_ShouldEditInFile" />
-        <item itemvalue="Gradle.AddressBookTest.givePersonList_ReadList_ShouldReturnList" />
       </list>
     </recent_temporary>
   </component>
